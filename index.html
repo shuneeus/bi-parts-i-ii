@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Huneeus - Asana assignment 1-3</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>Asana-github</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
 
@@ -14254,25 +14254,24 @@ a.anchor-link {
 
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Business-Inteligence-Assignment">Business Inteligence Assignment<a class="anchor-link" href="#Business-Inteligence-Assignment">&#182;</a></h1><h3 id="Sebasti&#225;n-Huneeus">Sebasti&#225;n Huneeus<a class="anchor-link" href="#Sebasti&#225;n-Huneeus">&#182;</a></h3><h4 id="sebastian@codept.de">sebastian@codept.de<a class="anchor-link" href="#sebastian@codept.de">&#182;</a></h4><h4 id="github-page"><a href="https://shuneeus.github.io/">github page</a><a class="anchor-link" href="#github-page">&#182;</a></h4>
+<h1 id="Business-Inteligence-Project">Business Inteligence Project<a class="anchor-link" href="#Business-Inteligence-Project">&#182;</a></h1><h3 id="Sebasti&#225;n-Huneeus">Sebasti&#225;n Huneeus<a class="anchor-link" href="#Sebasti&#225;n-Huneeus">&#182;</a></h3><h4 id="sebastian@codept.de">sebastian@codept.de<a class="anchor-link" href="#sebastian@codept.de">&#182;</a></h4><h4 id="github-page"><a href="https://shuneeus.github.io/">github page</a><a class="anchor-link" href="#github-page">&#182;</a></h4>
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Using real data from a company, I developed a business analysis in four stages. For doing this, I pulled data from a server and joined the tables using  SQL queries. The main objective of the analysis was to respond to three separate questions: Is the data robust? What KPIs make sense to look at? how to deal with attribution difficulties and to give recommendations to the head of performance marketing?</p>
+<p>Using actual data from Facebook Campaigns from an App, I developed a business analysis to find which campaigns were more effective. For doing so, I pulled data from a server, joined the tables using  SQL queries and calculated summary statistics and visualizations. Comparing the performance of web and app campaigns across multiple regions, I came up with some insights and recommendations for the marketing management team.</p>
 <p>The main actions taken were:</p>
 <ul>
-<li>1 I pulled the data from the server and performed a first sanity check. </li>
-<li>2 I defined a KPI that made sense to look at (ROAS). </li>
-<li>3 An analysis on how to deal with the web campaign attribution difficulties.</li>
-<li>4 A set of recommendations to the head of performance marketing. </li>
+<li>1 Pulling the data from the server and a first sanity check. </li>
+<li>2 KPI definition and calculation. </li>
+<li>3 Visualizations, insights and recommendations to the head of the marketing team.</li>
 </ul>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Data-retrieving">Data retrieving<a class="anchor-link" href="#Data-retrieving">&#182;</a></h1>
+<h1 id="1.-Data-retrieving">1. Data retrieving<a class="anchor-link" href="#1.-Data-retrieving">&#182;</a></h1>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
@@ -14326,13 +14325,12 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="1.-Data-sanity-checks">1. Data sanity checks<a class="anchor-link" href="#1.-Data-sanity-checks">&#182;</a></h1><h3 id="Checking-mainly-for-duplicates-&amp;-missing-in-some-the-tables.">Checking mainly for duplicates &amp; missing in some the tables.<a class="anchor-link" href="#Checking-mainly-for-duplicates-&amp;-missing-in-some-the-tables.">&#182;</a></h3><p>There's no substantial ammount of duplicates or missing.</p>
-
+<h1 id="1.1-Data-sanity-checks">1.1 Data sanity checks<a class="anchor-link" href="#1.1-Data-sanity-checks">&#182;</a></h1><h3 id="Checking-for-duplicates-&amp;-missing-in-the-tables.">Checking for duplicates &amp; missing in the tables.<a class="anchor-link" href="#Checking-for-duplicates-&amp;-missing-in-the-tables.">&#182;</a></h3>
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Table1:-fbt_web_sessions">Table1: fbt_web_sessions<a class="anchor-link" href="#Table1:-fbt_web_sessions">&#182;</a></h3>
+<h3 id="Dowloading-Table1:-fbt_web_sessions">Dowloading Table1: fbt_web_sessions<a class="anchor-link" href="#Dowloading-Table1:-fbt_web_sessions">&#182;</a></h3>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
@@ -14343,8 +14341,6 @@ a.anchor-link {
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">fbt_web_sessions</span> <span class="o">=</span> <span class="s2">&quot;select * from fbt_web_sessions&quot;</span>
 
 <span class="n">fbt_web_sessions_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="n">fbt_web_sessions</span><span class="p">,</span> <span class="n">conn</span><span class="p">)</span>
-
-<span class="n">fbt_web_sessions_df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;asana_downloads/web_sessions.csv&quot;</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14358,8 +14354,7 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fbt_web_sessions_df</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;asana_downloads/web_sessions.csv&quot;</span><span class="p">,</span> <span class="n">index_col</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
-<span class="n">fbt_web_sessions_df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fbt_web_sessions_df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -14507,7 +14502,7 @@ memory usage: 23.9+ MB
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fbt_web_sessions_df</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="n">index</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sk_web_user&#39;</span><span class="p">],</span> <span class="n">aggfunc</span> <span class="o">=</span><span class="s1">&#39;size&#39;</span><span class="p">)</span> <span class="c1"># no duplicated users! </span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fbt_web_sessions_df</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="n">index</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sk_web_user&#39;</span><span class="p">],</span> <span class="n">aggfunc</span> <span class="o">=</span><span class="s1">&#39;size&#39;</span><span class="p">)</span> 
 </pre></div>
 
      </div>
@@ -14553,7 +14548,7 @@ Length: 447858, dtype: int64</pre>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Table2:-fbt_web_user">Table2: fbt_web_user<a class="anchor-link" href="#Table2:-fbt_web_user">&#182;</a></h3>
+<h3 id="Dowloading-of-Table2:-fbt_web_user">Dowloading of Table2: fbt_web_user<a class="anchor-link" href="#Dowloading-of-Table2:-fbt_web_user">&#182;</a></h3>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
@@ -14564,10 +14559,6 @@ Length: 447858, dtype: int64</pre>
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">fbt_web_user</span> <span class="o">=</span> <span class="s2">&quot;select * from fbt_web_user_mapping&quot;</span>
 
 <span class="n">fbt_web_user_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="n">fbt_web_user</span><span class="p">,</span> <span class="n">conn</span><span class="p">)</span>
-
-<span class="n">fbt_web_user_df</span>
-
-<span class="n">fbt_web_user_df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;asana_downloads/web_users.csv&quot;</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14581,52 +14572,7 @@ Length: 447858, dtype: int64</pre>
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fbt_web_user_df</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;asana_downloads/web_users.csv&quot;</span><span class="p">,</span> <span class="n">index_col</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
-<span class="n">fbt_web_user_df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
-Int64Index: 159537 entries, 0 to 159536
-Data columns (total 3 columns):
- #   Column         Non-Null Count   Dtype 
----  ------         --------------   ----- 
- 0   sk_user        159537 non-null  int64 
- 1   domain_userid  159537 non-null  object
- 2   sk_web_user    159537 non-null  int64 
-dtypes: int64(2), object(1)
-memory usage: 4.9+ MB
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fbt_web_user_df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span> <span class="c1"># no nan </span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fbt_web_user_df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -14716,7 +14662,7 @@ Length: 158630, dtype: int64</pre>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Table3:-fbt_facebook_campaigns">Table3: fbt_facebook_campaigns<a class="anchor-link" href="#Table3:-fbt_facebook_campaigns">&#182;</a></h3>
+<h3 id="Dowloading-of-Table3:-fbt_facebook_campaigns">Dowloading of Table3: fbt_facebook_campaigns<a class="anchor-link" href="#Dowloading-of-Table3:-fbt_facebook_campaigns">&#182;</a></h3>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
@@ -14890,7 +14836,8 @@ Length: 158630, dtype: int64</pre>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="1.1.-Exploratory-analysis">1.1. Exploratory analysis<a class="anchor-link" href="#1.1.-Exploratory-analysis">&#182;</a></h1>
+<h1 id="1.2-Exploratory-analysis">1.2 Exploratory analysis<a class="anchor-link" href="#1.2-Exploratory-analysis">&#182;</a></h1><p>The following table shows that there are four campaigns in the data. The count and percentages represent the number of times that each campaign appears in the data set.</p>
+
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
@@ -14898,7 +14845,7 @@ Length: 158630, dtype: int64</pre>
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fbt_campaigns_df</span><span class="o">.</span><span class="n">stb</span><span class="o">.</span><span class="n">freq</span><span class="p">([</span><span class="s2">&quot;campaign_id&quot;</span><span class="p">])</span> <span class="c1">### many duplicated campaign IDs! </span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fbt_campaigns_df</span><span class="o">.</span><span class="n">stb</span><span class="o">.</span><span class="n">freq</span><span class="p">([</span><span class="s2">&quot;campaign_id&quot;</span><span class="p">])</span>
 </pre></div>
 
      </div>
@@ -14991,94 +14938,8 @@ Length: 158630, dtype: int64</pre>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="N&#186;-of-campaigns">N&#186; of campaigns<a class="anchor-link" href="#N&#186;-of-campaigns">&#182;</a></h3>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">campaigns</span> <span class="o">=</span> <span class="s2">&quot;select distinct campaign_name, campaign_id from fbt_facebook_campaigns&quot;</span>
-<span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="n">campaigns</span><span class="p">,</span> <span class="n">conn</span><span class="p">)</span>
-</pre></div>
+<h3 id="Campaign-spenditure">Campaign spenditure<a class="anchor-link" href="#Campaign-spenditure">&#182;</a></h3><p>The expenditure amount differs vastly among campaigns.  Campaign ID 279755 sets the superior spending cap ($155,666). However, the figures don't allow us to tell which campaigns are performing better and worse.</p>
 
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[11]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>campaign_name</th>
-      <th>campaign_id</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>android_campaign_world</td>
-      <td>339703</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>ios_campaign_north_america</td>
-      <td>379581</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>ios_campaign_world</td>
-      <td>279755</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>web_campaign_world</td>
-      <td>280020</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Campaign-spend-(app-&amp;-web)">Campaign spend (app &amp; web)<a class="anchor-link" href="#Campaign-spend-(app-&amp;-web)">&#182;</a></h3>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
@@ -15173,687 +15034,25 @@ Length: 158630, dtype: int64</pre>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="App-revenue-attributable-to-campaigns">App revenue attributable to campaigns<a class="anchor-link" href="#App-revenue-attributable-to-campaigns">&#182;</a></h3>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">revenue_by_campaign</span> <span class="o">=</span> <span class="s2">&quot;select </span><span class="se">\</span>
-<span class="s2">                        fbt_installs.campaign_id, </span><span class="se">\</span>
-<span class="s2">                        sum(fbt_conversions_app.revenue) app_revenue</span><span class="se">\</span>
-<span class="s2">                    from </span><span class="se">\</span>
-<span class="s2">                        fbt_conversions_app</span><span class="se">\</span>
-<span class="s2">                    left join </span><span class="se">\</span>
-<span class="s2">                        fbt_installs</span><span class="se">\</span>
-<span class="s2">                    on </span><span class="se">\</span>
-<span class="s2">                        fbt_conversions_app.sk_user = fbt_installs.sk_user </span><span class="se">\</span>
-<span class="s2">                    group by </span><span class="se">\</span>
-<span class="s2">                        fbt_installs.campaign_id&quot;</span>
-
-<span class="n">revenue_by_campaign_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="n">revenue_by_campaign</span><span class="p">,</span> <span class="n">conn</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[49]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">revenue_by_campaign_df</span> <span class="o">=</span> <span class="n">revenue_by_campaign_df</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
-<span class="n">revenue_by_campaign_df</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[49]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>campaign_id</th>
-      <th>app_revenue</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>279755</td>
-      <td>155108.34</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>339703</td>
-      <td>44214.67</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>379581</td>
-      <td>24028.32</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">round</span><span class="p">(</span><span class="nb">sum</span><span class="p">((</span><span class="n">revenue_by_campaign_df</span><span class="p">[</span><span class="s2">&quot;app_revenue&quot;</span><span class="p">])),</span><span class="mi">2</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[15]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>298152.46</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="App-revenue-attributable-to-campaigns-by-region">App revenue attributable to campaigns by region<a class="anchor-link" href="#App-revenue-attributable-to-campaigns-by-region">&#182;</a></h3>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">app_revenue_by_camp_reg</span> <span class="o">=</span>   <span class="s2">&quot;select </span><span class="se">\</span>
-<span class="s2">                            e.sub_region, </span><span class="se">\</span>
-<span class="s2">                            e.campaign_id,</span><span class="se">\</span>
-<span class="s2">                            sum(a.revenue) app_revenue</span><span class="se">\</span>
-<span class="s2">                        from </span><span class="se">\</span>
-<span class="s2">                            fbt_conversions_app a,</span><span class="se">\</span>
-<span class="s2">                            fbt_installs e </span><span class="se">\</span>
-<span class="s2">                        where </span><span class="se">\</span>
-<span class="s2">                            a.sk_user =e.sk_user </span><span class="se">\</span>
-<span class="s2">                        group by </span><span class="se">\</span>
-<span class="s2">                            e.campaign_id,</span><span class="se">\</span>
-<span class="s2">                            e.sub_region </span><span class="se">\</span>
-<span class="s2">                        order by </span><span class="se">\</span>
-<span class="s2">                            e.sub_region&quot;</span>
-<span class="n">app_revenue_by_camp_reg_df</span> <span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="n">app_revenue_by_camp_reg</span><span class="p">,</span> <span class="n">conn</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">app_revenue_by_camp_reg_df</span><span class="o">=</span><span class="n">app_revenue_by_camp_reg_df</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
-<span class="n">app_revenue_by_camp_reg_df</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[19]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>sub_region</th>
-      <th>campaign_id</th>
-      <th>app_revenue</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Australasia &amp; Asia</td>
-      <td>279755</td>
-      <td>13213.37</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Australasia &amp; Asia</td>
-      <td>339703</td>
-      <td>2541.79</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Australasia &amp; Asia</td>
-      <td>379581</td>
-      <td>85.09</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Northern America</td>
-      <td>279755</td>
-      <td>40208.91</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>Northern America</td>
-      <td>339703</td>
-      <td>10073.74</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>Northern America</td>
-      <td>379581</td>
-      <td>23684.52</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>Northern &amp; Western Europe</td>
-      <td>279755</td>
-      <td>65595.11</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>Northern &amp; Western Europe</td>
-      <td>339703</td>
-      <td>21641.83</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>Northern &amp; Western Europe</td>
-      <td>379581</td>
-      <td>132.66</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>South &amp; Central America</td>
-      <td>279755</td>
-      <td>19061.40</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>South &amp; Central America</td>
-      <td>339703</td>
-      <td>5626.17</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>South &amp; Central America</td>
-      <td>379581</td>
-      <td>126.05</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>Southern &amp; Eastern Europe</td>
-      <td>279755</td>
-      <td>17029.55</td>
-    </tr>
-    <tr>
-      <th>17</th>
-      <td>Southern &amp; Eastern Europe</td>
-      <td>339703</td>
-      <td>4331.14</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">round</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">app_revenue_by_camp_reg_df</span><span class="p">[</span><span class="s2">&quot;app_revenue&quot;</span><span class="p">]),</span><span class="mi">2</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[20]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>223351.33</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Total-web-revenues">Total web revenues<a class="anchor-link" href="#Total-web-revenues">&#182;</a></h3>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">total_web_revenue</span><span class="o">=</span> <span class="s2">&quot;select sum(revenue) total_web_revenue from fbt_conversions_web&quot;</span>
-<span class="n">total_web_revenue_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="n">total_web_revenue</span><span class="p">,</span> <span class="n">conn</span><span class="p">)</span>
-<span class="n">total_web_revenue_df</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[25]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>total_web_revenue</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>62752.91</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Web-revenues-attributable-to-campaigns-(via-web-conversions)">Web revenues attributable to campaigns (via web conversions)<a class="anchor-link" href="#Web-revenues-attributable-to-campaigns-(via-web-conversions)">&#182;</a></h3>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[33]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">web_rev_by_campaign</span><span class="o">=</span><span class="s2">&quot;select </span><span class="se">\</span>
-<span class="s2">                        c.campaign_id,</span><span class="se">\</span>
-<span class="s2">                        sum (a.revenue) web_revenue</span><span class="se">\</span>
-<span class="s2">                    from </span><span class="se">\</span>
-<span class="s2">                        fbt_conversions_web a,</span><span class="se">\</span>
-<span class="s2">                        fbt_web_user_mapping b,</span><span class="se">\</span>
-<span class="s2">                        fbt_web_sessions c</span><span class="se">\</span>
-<span class="s2">                    where </span><span class="se">\</span>
-<span class="s2">                        a.sk_user = b.sk_user</span><span class="se">\</span>
-<span class="s2">                    and </span><span class="se">\</span>
-<span class="s2">                        b.sk_web_user = c.sk_web_user  </span><span class="se">\</span>
-<span class="s2">                    group by </span><span class="se">\</span>
-<span class="s2">                        c.campaign_id &quot;</span>
-
-<span class="n">web_rev_by_campaign_df</span><span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="n">web_rev_by_campaign</span><span class="p">,</span> <span class="n">conn</span><span class="p">)</span>
-<span class="n">web_rev_by_campaign_df</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[33]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>campaign_id</th>
-      <th>web_revenue</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>280020</td>
-      <td>50997.98</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Web-revenues-attributable-to-campaigns-(via-web-conversions)-by-region">Web revenues attributable to campaigns (via web conversions) by region<a class="anchor-link" href="#Web-revenues-attributable-to-campaigns-(via-web-conversions)-by-region">&#182;</a></h3>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">web_rev_by_campgn_regi</span><span class="o">=</span> <span class="s2">&quot;select </span><span class="se">\</span>
-<span class="s2">                            d.sub_region, </span><span class="se">\</span>
-<span class="s2">                            d.campaign_id,</span><span class="se">\</span>
-<span class="s2">                            sum(b.revenue) web_revenue</span><span class="se">\</span>
-<span class="s2">                        from </span><span class="se">\</span>
-<span class="s2">                            fbt_conversions_web b,</span><span class="se">\</span>
-<span class="s2">                            fbt_web_user_mapping c,</span><span class="se">\</span>
-<span class="s2">                            fbt_web_sessions d</span><span class="se">\</span>
-<span class="s2">                        where </span><span class="se">\</span>
-<span class="s2">                            b.sk_user = c.sk_user </span><span class="se">\</span>
-<span class="s2">                        and </span><span class="se">\</span>
-<span class="s2">                            c.sk_web_user = d.sk_web_user</span><span class="se">\</span>
-<span class="s2">                        group by </span><span class="se">\</span>
-<span class="s2">                            d.campaign_id,</span><span class="se">\</span>
-<span class="s2">                            d.sub_region &quot;</span>
-
-<span class="n">web_rev_by_campgn_regi_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="n">web_rev_by_campgn_regi</span><span class="p">,</span> <span class="n">conn</span><span class="p">)</span>
-<span class="n">web_rev_by_campgn_regi_df</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[24]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>sub_region</th>
-      <th>campaign_id</th>
-      <th>web_revenue</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Australasia &amp; Asia</td>
-      <td>280020</td>
-      <td>7359.31</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Northern America</td>
-      <td>280020</td>
-      <td>20774.48</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Northern &amp; Western Europe</td>
-      <td>280020</td>
-      <td>10220.16</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>South &amp; Central America</td>
-      <td>280020</td>
-      <td>4218.88</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Southern &amp; Eastern Europe</td>
-      <td>280020</td>
-      <td>8425.15</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[42]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">round</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">web_rev_by_campgn_regi_df</span><span class="p">[</span><span class="s2">&quot;web_revenue&quot;</span><span class="p">]),</span><span class="mi">2</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[42]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>50997.979999999996</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="2.-KPI:-Return-on-ad-spend-(ROAS)">2. KPI: Return on ad-spend (ROAS)<a class="anchor-link" href="#2.-KPI:-Return-on-ad-spend-(ROAS)">&#182;</a></h1><p>The data allows calculating the return on ads-spending KPI or ROAS. This KPI represents the fraction of conversions due to ad exposure divided by the expenditure amount of the campaign. The value of 0.9 is the threshold, and a ROAS of more than 0.9 is a reasonable return on the investment.</p>
-<ul>
-<li>ROAS :CAMPAIGN REVENUE / CAMPAIGN COST 
-<strong> revenue = all attributable subscriptions by campaigns </strong> cost = cost by campaigns</li>
+<h3 id="Having-concluded-with-the-sanity-check-and-exploratory-analysis,-I--conclude-that:">Having concluded with the sanity check and exploratory analysis, I  conclude that:<a class="anchor-link" href="#Having-concluded-with-the-sanity-check-and-exploratory-analysis,-I--conclude-that:">&#182;</a></h3><ul>
+<li>there are four campaigns, with different expenditure volume </li>
+<li>there are no substantial amount of duplicates</li>
+<li>there are no substantial amount of missing values</li>
 </ul>
+<p>The data is largely robust, and we can proceed to build a more informative analysis.</p>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="2.1.-Web-ROAS-grouped-by-campaign-and-sub-region">2.1. Web ROAS grouped by campaign and sub region<a class="anchor-link" href="#2.1.-Web-ROAS-grouped-by-campaign-and-sub-region">&#182;</a></h3>
+<h1 id="2.-KPI:-Return-on-ad-spend-(ROAS)">2. KPI: Return on ad-spend (ROAS)<a class="anchor-link" href="#2.-KPI:-Return-on-ad-spend-(ROAS)">&#182;</a></h1><p>The data allows calculating the return on ads-spending KPI (ROAS). This KPI represents the fraction of conversions due to ad exposure divided by the expenditure amount of the campaign. The metric represents the effectiveness of marketing campaigns. Some marketing managers set the ROAS threshold in 0.9; a ROAS of superior to 0.9 is considered an acceptable return on the investment.</p>
+<p>In the next section, I'll pull the data from the different tables, merge them and calculate the ROAS for web and app Facebook campaigns. To increase the granularity of the analysis, I nested the measurements into regional clusters.</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="2.1.-Web-ROAS">2.1. Web ROAS<a class="anchor-link" href="#2.1.-Web-ROAS">&#182;</a></h3>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
@@ -16032,227 +15231,7 @@ Length: 158630, dtype: int64</pre>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Mean-web-ROAS">Mean web ROAS<a class="anchor-link" href="#Mean-web-ROAS">&#182;</a></h3>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">round</span><span class="p">(</span><span class="n">web_roas</span><span class="p">[</span><span class="s2">&quot;WEB_ROAS&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="mi">2</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[21]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>0.8</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="2.2.-App-Channel">2.2. App Channel<a class="anchor-link" href="#2.2.-App-Channel">&#182;</a></h2>
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="App-campaigns-considering-a-fraction-of-web-converstions-attributable-to-them">App campaigns considering a fraction of web converstions attributable to them<a class="anchor-link" href="#App-campaigns-considering-a-fraction-of-web-converstions-attributable-to-them">&#182;</a></h3>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#revenue web - install - campaign + revenue_app - install - campaign*/</span>
-
-<span class="n">app_web_convs_</span><span class="o">=</span>  <span class="s2">&quot;select </span><span class="se">\</span>
-<span class="s2">                            c.campaign_id,</span><span class="se">\</span>
-<span class="s2">                            sum(a.revenue) rev_web,</span><span class="se">\</span>
-<span class="s2">                            d.revenue_app,</span><span class="se">\</span>
-<span class="s2">                            e.spend </span><span class="se">\</span>
-<span class="s2">                            from </span><span class="se">\</span>
-<span class="s2">                            fbt_conversions_web a,</span><span class="se">\</span>
-<span class="s2">                            fbt_installs b,</span><span class="se">\</span>
-<span class="s2">                                (select distinct campaign_id</span><span class="se">\</span>
-<span class="s2">                                from </span><span class="se">\</span>
-<span class="s2">                                fbt_facebook_campaigns) c,</span><span class="se">\</span>
-<span class="s2">                                (select fbt_installs.campaign_id,</span><span class="se">\</span>
-<span class="s2">                                sum(fbt_conversions_app.revenue) revenue_app</span><span class="se">\</span>
-<span class="s2">                                from </span><span class="se">\</span>
-<span class="s2">                                fbt_conversions_app,</span><span class="se">\</span>
-<span class="s2">                                fbt_installs</span><span class="se">\</span>
-<span class="s2">                                where </span><span class="se">\</span>
-<span class="s2">                                fbt_conversions_app.sk_user = fbt_installs.sk_user</span><span class="se">\</span>
-<span class="s2">                                group by </span><span class="se">\</span>
-<span class="s2">                                fbt_installs.campaign_id </span><span class="se">\</span>
-<span class="s2">                                ) d,</span><span class="se">\</span>
-<span class="s2">                                (select sum(spend) spend,campaign_id</span><span class="se">\</span>
-<span class="s2">                                from fbt_facebook_campaigns</span><span class="se">\</span>
-<span class="s2">                                group by campaign_id) e</span><span class="se">\</span>
-<span class="s2">                            where</span><span class="se">\</span>
-<span class="s2">                            a.sk_user =b.sk_user </span><span class="se">\</span>
-<span class="s2">                            and</span><span class="se">\</span>
-<span class="s2">                            b.campaign_id =c.campaign_id</span><span class="se">\</span>
-<span class="s2">                            and </span><span class="se">\</span>
-<span class="s2">                            c.campaign_id = d.campaign_id</span><span class="se">\</span>
-<span class="s2">                            and </span><span class="se">\</span>
-<span class="s2">                            c.campaign_id = e.campaign_id</span><span class="se">\</span>
-<span class="s2">                            group by</span><span class="se">\</span>
-<span class="s2">                            e.spend,</span><span class="se">\</span>
-<span class="s2">                            d.revenue_app,</span><span class="se">\</span>
-<span class="s2">                            c.campaign_id;&quot;</span>
-
-<span class="n">app_web_convs_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="n">app_web_convs_</span><span class="p">,</span> <span class="n">conn</span><span class="p">)</span>
-<span class="n">app_web_convs_df</span>
-<span class="n">app_web_convs_df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;outputs/app_web_convs_df.csv&quot;</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>App campaigns have a fraction of web converstions attributable to them:</p>
-
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">app_web_convs_df</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;outputs/app_web_convs_df.csv&quot;</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">app_web_convs_df</span><span class="p">[</span><span class="s2">&quot;ROAS&quot;</span><span class="p">]</span><span class="o">=</span><span class="p">(</span><span class="n">app_web_convs_df</span><span class="p">[</span><span class="s2">&quot;rev_web&quot;</span><span class="p">]</span><span class="o">+</span><span class="n">app_web_convs_df</span><span class="p">[</span><span class="s2">&quot;revenue_app&quot;</span><span class="p">])</span><span class="o">/</span><span class="n">app_web_convs_df</span><span class="p">[</span><span class="s2">&quot;spend&quot;</span><span class="p">]</span>
-<span class="n">app_web_convs_df</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[10]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Unnamed: 0</th>
-      <th>campaign_id</th>
-      <th>rev_web</th>
-      <th>revenue_app</th>
-      <th>spend</th>
-      <th>ROAS</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>0</td>
-      <td>339703</td>
-      <td>654.26</td>
-      <td>44214.67</td>
-      <td>46391.0</td>
-      <td>0.97</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1</td>
-      <td>379581</td>
-      <td>267.12</td>
-      <td>24028.32</td>
-      <td>63239.0</td>
-      <td>0.38</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>2</td>
-      <td>279755</td>
-      <td>986.90</td>
-      <td>155108.34</td>
-      <td>155666.0</td>
-      <td>1.00</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="App-ROAS-by-campaign-by-subregion">App ROAS by campaign by subregion<a class="anchor-link" href="#App-ROAS-by-campaign-by-subregion">&#182;</a></h3>
+<h2 id="2.2.-App-ROAS">2.2. App ROAS<a class="anchor-link" href="#2.2.-App-ROAS">&#182;</a></h2>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
@@ -16466,69 +15445,6 @@ Length: 158630, dtype: int64</pre>
 
 </div>
 
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Mean-APP-ROAS">Mean APP ROAS<a class="anchor-link" href="#Mean-APP-ROAS">&#182;</a></h3>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">round</span><span class="p">(</span><span class="n">app_roas</span><span class="p">[</span><span class="s2">&quot;APP_ROAS&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="mi">2</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[23]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>0.91</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>The web campaign</p>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>According to the data, app ads perform about 11% better than web ads. The web campaign was divided into regional campaigns, averaging a ROAS of 0.8, with a minimum of 0.62 (Northern &amp; Western Europe) and a maximum value of 1.02 (Australasia &amp; Asia).</p>
-<p>The app campaigns had an average of 0.91, but with more dispersion, with a minimum ROAS of 0.38 (id 379581) and a maximum of 1.0 ( id 279755). Regionally, the less responsive area was Northern America (ROAS 0.37), and the most responsive was Northern &amp; Western Europe (ROAS 1.25).</p>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="3.-How-to-deal-with-attribution-difficulties">3. How to deal with attribution difficulties<a class="anchor-link" href="#3.-How-to-deal-with-attribution-difficulties">&#182;</a></h1><p>The main difficulty in the attribution model is to connect the conversions to campaigns accurately. In the app subscriptions, the attribution is straightforward - one transaction can be linked to an app install and a campaign id. However, this model fails when a conversion is due to an ad is seen on a different device.</p>
-<p>More broadly, the attribution model has one critical gap; it underestimates the actual effect of the campaigns. The attribution model misses several cases, like users that saw the ad, quit the session, and returned using the Facebook app. Also, it doesn't measure if a person changed devices or if she was recommended by another user exposed to the ad (it doesn't capture contagion, spillovers and network effects). Also, a user can be exposed to an app ad in the web browser from a desktop computer and then purchase a subscription on the mobile. In that case, it is not possible to make the attribution.</p>
-<p>The ROAS underestimate the effect of campaigns since there are many cases where attribution is not possible. In that way, ROAS is a biased estimator that minimizes the true (unknown) value of conversions due to ad exposure. My advice is to consider these measures as biased estimates of the campaign's true impact on revenue. One avenue would be collecting additional data from an app survey to the subscribers to overcome this attenuation bias. The survey should ask if she saw the ad on the Facebook App or the Facebook website and, then, if she subscribed using the Asana app or the website. Depending on the quality of the sampling, the sample proportions of users following different subscription paths can be considered a proxy to correct this bias.</p>
-
-</div>
 </div>
 </body>
 
